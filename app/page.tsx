@@ -94,7 +94,7 @@ export default function Page() {
 
   return (
     <div className="flex justify-center items-center min-h-screen min-w-[375px]">
-      <main className="w-full min-h-dvh flex flex-col md:min-h-100 max-w-5xl md:bg-white md:rounded-xl">
+      <main className="w-full min-h-dvh flex flex-col md:min-h-100 max-w-5xl md:bg-white md:rounded-xl md:drop-shadow-xl">
         <div className="grid place-content-stretch grow md:grow-0">
           <div className="[grid-area:1/1] h-full">
             <Image src="/bg-sidebar-mobile.svg" alt="sidebarMobile" width={375} height={172} className="min-w-dvw md:hidden"/>
