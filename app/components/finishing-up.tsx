@@ -33,9 +33,9 @@ export const FinishingUp = ({ setStepNum, isYearly, plan, addOns }: IFinishingUp
 
     return (
         <>
-            <h1 className="text-3xl font-bold">Finishing up</h1>
+            <h1 className="text-3xl font-bold md:text-[33px]">Finishing up</h1>
             <p className="text-Grey-500 mt-3 mb-5">Double-check everything looks OK before confirming.</p>
-            <div className="bg-Blue-100 rounded-lg p-4 ">
+            <div className="bg-Blue-50 rounded-lg p-4 ">
                 <div className="flex border-b border-Grey-500 pb-3 mb-4">
                     <div className="text-left grow">
                         <div className="capitalize font-medium">{plan} ({frequencyText})</div>
@@ -63,7 +63,7 @@ export const FinishingUp = ({ setStepNum, isYearly, plan, addOns }: IFinishingUp
             </div>
             <div className="flex px-4 mt-6 mb-2">
                 <div className="grow text-Grey-500">Total (per {isYearly ? "year" : "month"})</div>
-                <div className="text-Purple-600 font-bold">+${totalPricing}/{frequencyTextShortened}</div>
+                <div className="text-Purple-600 font-bold text-lg">+${totalPricing}/{frequencyTextShortened}</div>
             </div>
         </>
     )

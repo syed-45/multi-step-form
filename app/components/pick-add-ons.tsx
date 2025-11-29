@@ -27,7 +27,7 @@ export const PickAddOns = ({ onFormSubmit, isYearly }: IPickAddOnsProps) => {
 
     return (
         <>
-            <h1 className="text-3xl font-bold">Pick add-ons</h1>
+            <h1 className="text-3xl font-bold md:text-[33px]">Pick add-ons</h1>
             <p className="text-Grey-500 mt-3 mb-5">Add-ons help enhance your gaming experience.</p>
             <form
                 id="pickAddOnsForm"
@@ -63,7 +63,7 @@ const AddOn = ({addOn, description, monthlyPricing, isYearly }: IAddOnProps) => 
     const pricingFrequency = isYearly ? "yr" : "mo";
     return (
         <label htmlFor={addOn}>
-            <div className={`border py-4 px-4 mb-4 flex items-center justify-start rounded-lg has-checked:border-Purple-600 border-Grey-500`}>
+            <div className={`border py-4 px-4 mb-4 flex items-center justify-start rounded-lg has-checked:border-Purple-600 border-Grey-500 cursor-pointer duration-250 hover:border-Purple-600 md:px-6`}>
                 <input 
                     type="checkbox"
                     name="addOn"
@@ -72,7 +72,7 @@ const AddOn = ({addOn, description, monthlyPricing, isYearly }: IAddOnProps) => 
                     value={addOn} 
                     className="peer appearance-none"
                 />
-                <div className={`peer-checked:bg-Purple-600 peer-checked:border-0 flex justify-center items-center min-w-7 min-h-7 mr-4 rounded-md border border-Grey-500`}>
+                <div className={`peer-checked:bg-Purple-600 peer-checked:border-0 flex justify-center items-center min-w-7 min-h-7 mr-4 rounded-md border border-Grey-500 md:mr-6`}>
                     <svg className="w-4 h-3 stroke-white stroke-2" xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9">
                         <path fill="none" d="m1 4 3.433 3.433L10.866 1"/>
                     </svg>
