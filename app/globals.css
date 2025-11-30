@@ -29,10 +29,10 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.form-error:has(+ input:invalid)::after {
+.form-error:has(+ input:user-invalid)::after {
   content: 'Please fill in this field';
 }
 
-.form-error-email:has(+ input:invalid)::after {
+.form-error-email:has(+ input:user-invalid)::after {
   content: 'Please enter a valid email address';
 }

@@ -1,11 +1,10 @@
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 
 interface IPersonalInfoProps {
     onFormSubmit: (e: FormEvent<HTMLFormElement>) => void
 }
 
 export default function PersonalInfo({ onFormSubmit }: IPersonalInfoProps) {
-    const [showInvalid, setShowInvalid] = useState(false)
 
   return (
     <>
@@ -14,12 +13,11 @@ export default function PersonalInfo({ onFormSubmit }: IPersonalInfoProps) {
         <form
             id="personalInfoForm"
             onSubmit={e => onFormSubmit(e)}
-            onInvalid={() => setShowInvalid(true)}
             className="flex flex-col"
         >
             <label
                 htmlFor="name"
-                className={`${showInvalid ? "form-error" : ""} after:text-Red-500 after:grow after:text-right w-full mb-0.5 flex md:mb-1`}
+                className={`form-error after:text-Red-500 after:grow after:text-right w-full mb-0.5 flex md:mb-1`}
             >
                 Name
             </label>
@@ -29,11 +27,11 @@ export default function PersonalInfo({ onFormSubmit }: IPersonalInfoProps) {
                 type="name"
                 placeholder="e.g Stephen King"
                 required
-                className={`mb-3 px-4 py-3 placeholder:text-Grey-500 border border-Grey-500 w-full rounded-sm md:rounded-lg ${showInvalid && "invalid:border-Red-500"}`}
+                className={`mb-3 px-4 py-3 placeholder:text-Grey-500 border border-Grey-500 w-full rounded-sm md:rounded-lg user-invalid:border-Red-500`}
             />
             <label 
                 htmlFor="email"
-                className={`${showInvalid ? "form-error-email" : ""} after:text-Red-500 after:grow after:text-right w-full mb-0.5 flex md:mb-1`}
+                className={`form-error-email after:text-Red-500 after:grow after:text-right w-full mb-0.5 flex md:mb-1`}
             >
                 Email Address
             </label>
@@ -43,11 +41,11 @@ export default function PersonalInfo({ onFormSubmit }: IPersonalInfoProps) {
                 type="email"
                 placeholder="e.g stephenking@lorem.com"
                 required
-                className={`mb-3 px-4 py-3 placeholder:text-Grey-500 border border-Grey-500 w-full rounded-sm md:rounded-lg ${showInvalid && "invalid:border-Red-500"}`}
+                className={`mb-3 px-4 py-3 placeholder:text-Grey-500 border border-Grey-500 w-full rounded-sm md:rounded-lg user-invalid:border-Red-500`}
             />
             <label 
                 htmlFor="phone"
-                className={`${showInvalid ? "form-error" : ""} after:text-Red-500 after:grow after:text-right w-full mb-0.5 flex md:mb-1`}
+                className={`form-error after:text-Red-500 after:grow after:text-right w-full mb-0.5 flex md:mb-1`}
             >
                 Phone Number
             </label>                  
@@ -57,7 +55,7 @@ export default function PersonalInfo({ onFormSubmit }: IPersonalInfoProps) {
                 type="phone"
                 placeholder="e.g. +1 234 567 890"
                 required
-                className={`px-4 py-3 placeholder:text-Grey-500 border border-Grey-500 w-full rounded-sm md:rounded-lg ${showInvalid && "invalid:border-Red-500"}`}
+                className={`px-4 py-3 placeholder:text-Grey-500 border border-Grey-500 w-full rounded-sm md:rounded-lg user-invalid:border-Red-500`}
             />                               
         </form>
     </>
